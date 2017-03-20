@@ -593,7 +593,7 @@ var CoverPreview = function(b) {
             this.jqXHR[f] ? this.jqXHR[f].done(function(c) {
                 c && (!c.code && c.data) && g._buildPreview(a, c.data)
             }) : this.jqXHR[f] = b.ajax({
-                url: "http://api.bilibili.com/pvideo",
+                url: "//api.bilibili.com/pvideo",
                 data: {
                     aid: f,
                     type: "jsonp"
@@ -603,7 +603,9 @@ var CoverPreview = function(b) {
                 c && (!c.code && c.data) && g._buildPreview(a, c.data)
             }).fail(function() {}).always(function() {
                 b(a).find(".fore > span").attr("data-loading", !1)
-            })
+            });
+            // c.data = 
+            // g._buildPreview(a, c.data);
         },
         _buildPreview: function(a, n) {
             var l = this.aid,
