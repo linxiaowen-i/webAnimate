@@ -600,8 +600,8 @@ var CoverPreview = function(b) {
             this.jqXHR[f] ? this.jqXHR[f].done(function(c) {
                 c && (!c.code && c.data) && g._buildPreview(a, c.data)
             }) : this.jqXHR[f] = b.ajax({
-                // url: "//api.bilibili.com/pvideo",
-                url: "http://api.bilibili.com/pvideo",
+                url: "//api.bilibili.com/pvideo",
+                // url: "http://api.bilibili.com/pvideo",
                 data: {
                     aid: f,
                     type: "jsonp"
