@@ -1,0 +1,112 @@
+div{
+	margin: 20px;
+}
+/*第一个 小车*/
+@keyframes drive{
+	from{
+		transform: translateX(0);
+	}
+	to{
+		transform: translateX(400px);
+	}
+}
+.car {
+	animation-name: drive;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in;
+}
+
+/*第二个 小球*/
+@keyframes ballmove {
+  0% {
+    transform: translateX(0) rotate(0);
+  }
+  20% {
+    transform: translateX(-10px) rotate(-0.5turn);
+  }
+  100% {
+    transform: translateX(450px) rotate(2turn);
+  }
+}
+.ball {             
+  animation-name: ballmove;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}
+
+/*第三个 steps*/
+.sprite {
+    width:245px;
+  height:400px;
+  display:block;    
+  background:transparent url(img/walker.png) 0 0 no-repeat;  
+ margin:3em auto;
+  animation: walker 1s steps(5) infinite;
+}
+@keyframes walker {
+  from {background-position:0 0;}
+  to {background-position:0 -4000px;}
+}
+            
+/*第四个 hover*/
+.sticker {
+  width:200px;
+  height:200px;
+  position:absolute;
+  background: url(img/sticker.png) top center no-repeat; 
+  animation: spin 10s linear infinite;
+  animation-play-state: paused; 
+}
+.sticker:hover {
+  animation-play-state: running;
+}
+@keyframes spin {
+  100% {transform: rotate(1turn); }
+}
+
+/*第五个 多动画*/
+.mol {
+  width:174px;  
+  height:174px;
+    background:transparent url('img/mol_badge.png') top center no-repeat;
+    position:absolute;
+    left:400px;
+    animation-name: roll-in, scale-up;
+    animation-duration: 1s, .75s;
+  animation-delay: 0s ,1s;
+    animation-timing-function: ease-in, linear; 
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes roll-in {
+    0%{
+    transform: translateX(-200px) rotate(0deg);
+  }     
+    100% {
+    transform: translateX(0px) rotate(360deg);
+  }     
+}
+
+@keyframes scale-up {
+    0% {
+        transform: scale(1);
+        animation-timing-function: ease-in;
+    }
+    25% {
+        transform: scale(1.15);
+        animation-timing-function: ease-out;
+    }
+    60% {
+        transform: scale(.9);
+        animation-timing-function: ease-in;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
