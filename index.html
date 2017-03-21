@@ -4,11 +4,14 @@
 	<meta charset="UTF-8">
 	<title>bilibili</title>
 	<link rel="stylesheet" href="css/list.css" />
+	<link rel="stylesheet" href="css/kids.css" />
 	<script src="js/jquery.min.js"></script>
-	<script src="js/CoverPreview.js"></script>
-	<script src="js/FakeDanmu.js"></script>
+	<script src="js/TweenMax.min.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/kid.js"></script>
 </head>
 <body>
+	<!-- list列表 -->
 	<div class="container-row">
 		<div class="b-body">
 		    <ul class="vidbox v-list">
@@ -259,6 +262,147 @@
 		            </div>
 		        </li>
 		    </ul>
+		</div>
+	</div>
+	<!-- 小爪机 -->
+	<div class="index-nav">
+		<div class="n-i n-i-mlink">
+			<div class="n-i-mlink-bg"></div>
+		</div>
+	</div>
+	<!-- 播放页的图标 -->
+	<div class="arc-toolbar">
+	    <div class="block share initialized">
+	        <span class="t">
+	            <i class="b-icon b-icon-a b-icon-anim-share" title="分享" style="display: block; width: 80px; height: 80px; background-image: url(css/img/anim-share.png); background-position: 0px 0px;"></i>
+	            <div class="t-right">
+	                <span class="t-right-top middle">分享</span>
+	                <span class="t-right-bottom" title="分享人数">5</span></div>
+	        </span>
+	        <div class="share-box copyinit" id="share_list" style="display: none;">
+	            <div class="share-left">
+	                <div class="share-list">
+	                    <div class="share-btn b-icon b-icon-share weibo" id="btn_weibo" title="分享到微博"></div>
+	                    <div class="share-btn b-icon b-icon-share qzone" id="btn_qqzone" title="分享到QQ空间"></div>
+	                    <div class="share-btn b-icon b-icon-share qq" id="btn_qq" title="分享到QQ"></div>
+	                    <div class="share-btn b-icon b-icon-share tieba" id="btn_baidu" title="分享到贴吧"></div>
+	                </div>
+	                <div class="share-time">
+	                    <label>
+	                        <input type="checkbox" name="has_start_time">开始时间</label>
+	                    <input type="text" name="video_start_time" value="0:00"></div>
+	                <div class="share-head">将视频贴到博客或论坛</div>
+	                <ul class="share-address-list">
+	                    <li class="share-address">
+	                        <label>视频地址</label>
+	                        <input type="text" name="video_address" id="link0" readonly="" value="">
+	                        <span class="address-copy">复制</span>
+	                        <div class="zclip" id="zclip-ZeroClipboardMovie_1" style="position: absolute; left: 341px; top: 152px; width: 40px; height: 20px; z-index: 99;">
+	                            <embed id="ZeroClipboardMovie_1" src="//static.hdslb.com/swf/ZeroClipboard.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="40" height="20" name="ZeroClipboardMovie_1" align="middle" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=1&amp;width=40&amp;height=20" wmode="transparent"></div>
+	                    </li>
+	                    <li class="share-address">
+	                        <label>Flash地址</label>
+	                        <input type="text" name="flash_address" id="link1" readonly="" value="">
+	                        <span class="address-copy">复制</span>
+	                        <div class="zclip" id="zclip-ZeroClipboardMovie_2" style="position: absolute; left: 341px; top: 188px; width: 40px; height: 20px; z-index: 99;">
+	                            <embed id="ZeroClipboardMovie_2" src="//static.hdslb.com/swf/ZeroClipboard.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="40" height="20" name="ZeroClipboardMovie_2" align="middle" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=2&amp;width=40&amp;height=20" wmode="transparent"></div>
+	                    </li>
+	                    <li class="share-address last">
+	                        <label>Html地址</label>
+	                        <input type="text" name="html_address" id="link2" readonly="" value="">
+	                        <span class="address-copy">复制</span>
+	                        <div class="zclip" id="zclip-ZeroClipboardMovie_3" style="position: absolute; left: 341px; top: 224px; width: 40px; height: 20px; z-index: 99;">
+	                            <embed id="ZeroClipboardMovie_3" src="//static.hdslb.com/swf/ZeroClipboard.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="40" height="20" name="ZeroClipboardMovie_3" align="middle" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=3&amp;width=40&amp;height=20" wmode="transparent"></div>
+	                    </li>
+	                </ul>
+	            </div>
+	            <div class="share-right">
+	                <div class="share-head">扫一扫分享到微信</div>
+	                <div class="share-btn" id="btn_weixin" title="扫一扫 分享到微信">
+	                    <div class="share-weixin">
+	                        <div class="qr-code">
+	                            <canvas width="150" height="150"></canvas>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="block fav">
+	        <span class="t fav_btn" href="//www.bilibili.com/m/stow?aid=9244604">
+	            <i class="b-icon b-icon-a b-icon-anim-fav" title="收藏" style="display: block; width: 80px; height: 80px; background-image: url(css/img/anim-fav.png); background-position: 0px 0px;"></i>
+	            <div class="t-right">
+	                <span class="t-right-top">收藏</span>
+	                <span class="t-right-bottom stow_count" title="收藏人数">44</span></div>
+	        </span>
+	    </div>
+	    <div class="block app initialized" id="app_qrcode_box">
+	        <span class="t">
+	            <i class="b-icon b-icon-a b-icon-anim-app" title="用手机看" style="display: block; width: 80px; height: 80px; background-image: url(css/img/anim-app.png); background-position: 0px 0px;"></i>
+	            <div class="t-right">
+	                <span class="t-right-top">用手机看</span>
+	                <span class="t-right-bottom">离线看更方便</span></div>
+	        </span>
+	        <div class="qr-code-box" style="display: none;">
+	            <div class="qr-code-box-inner">
+	                <div class="qr-code" id="qr_code">
+	                    <canvas width="100" height="100"></canvas>
+	                </div>
+	                <div class="qr-info">
+	                    <div class="qr-info-head">小栗旬吃吃吃CM</div>
+	                    <div class="qr-info-description" id="qr_description"></div>
+	                </div>
+	                <div class="qr-bottom">用
+	                    <a href="//app.bilibili.com/" target="_blank">哔哩哔哩客户端</a>或其他应用扫描二维码</div></div>
+	        </div>
+	    </div>
+	    <div class="block coin" arctype="Copy" style="display: block;">
+	        <span class="t">
+	            <i class="b-icon b-icon-a b-icon-anim-coin" title="投硬币" style="display: block; width: 80px; height: 80px; background-image: url(css/img/anim-coin.png); background-position: 0px 0px;"></i>
+	            <div class="t-right">
+	                <span class="t-right-top">硬币</span>
+	                <span class="t-right-bottom v_ctimes" title="投币个数">5</span></div>
+	        </span>
+	    </div>
+	    <div class="block zan">
+	        <span class="t">
+	            <i class="b-icon b-icon-a b-icon-anim-zan" title="点赞" style="display: block; width: 80px; height: 80px; background-image: url(css/img/anim-zan.png); background-position: 0px 0px;"></i>
+	            <div class="t-right">
+	                <span class="t-right-top middle">点赞</span>
+	                <span class="t-right-bottom"></span>
+	            </div>
+	        </span>
+	    </div>
+	</div>
+	<!-- 腾讯儿童首页的几个动画 -->
+	<div class="qq_kids">
+		<!-- 玩 -->
+		<div class="play module3 layout">
+			<div class="tit_box">
+				<div class="cartoon_box">
+					<div class="football"></div>
+				</div>
+			</div>
+		</div>
+		<!-- 看 -->
+		<div class="look module3 layout">
+			<div class="tit_box">
+				<div class="cartoon_box">
+					<div class="kan0"></div>
+					<div class="kan1"></div>
+					<div class="kan2"></div>
+					<div class="kan3"></div>
+				</div>
+			</div>
+		</div>
+		<!-- 学 -->
+		<div class="study module3 layout">
+			<div class="tit_box">
+				<div class="cartoon_box">
+					<div class="xue1"></div>
+					<div class="xue2"></div>
+				</div>
+			</div>
 		</div>
 	</div>
 </body>

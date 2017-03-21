@@ -7146,11 +7146,8 @@ ul.tag li a.sp-tag {
 	left:0
 }
 .index-nav {
-	display:none;
-	position:fixed;
 	width:48px;
-	z-index:90;
-	text-align:center;
+	margin: 0 auto;
 	-webkit-touch-callout:none;
 	-webkit-user-select:none;
 	-khtml-user-select:none;
@@ -7285,20 +7282,15 @@ ul.tag li a.sp-tag {
 .index-nav .n-i.n-i-mlink {
 	border:0;
 	position:relative;
-	z-index:50
+	/*z-index:50*/
 }
-.index-nav .n-i.n-i-mlink .mlink-dl-msg {
-	background:url(//i0.hdslb.com/bfs/static/3af67e81274b02ca1693fdb73adbc03c98c3880a.png);
-	width:106px;
-	height:44px;
-	position:absolute;
-	left:-106px;
-	top:-23px;
-	display:none
-}
-.index-nav .n-i.n-i-mlink .n-i-mlink-bg {
-	height:30px;
-	margin-left:-16px
+.index-nav .n-i.n-i-mlink .n-i-mlink-bg{
+	display: block;
+	margin-left:-16px;
+    width: 80px;
+    height: 80px;
+    background-image: url(img/phone.png);
+    background-position: 0px 0px;	
 }
 .index-nav .n-i .name {
 	height:32px;
@@ -8554,7 +8546,7 @@ ul.tag li a.sp-tag {
 }
 .container-row .v-list {
 	width:100%;
-	height:316px;
+	/*height:316px;*/
 	overflow:hidden;
 	padding-top:20px
 }
@@ -11960,9 +11952,9 @@ ul.tag li a.sp-tag {
 	height:24px;
 	line-height:24px
 }
-.player-wrapper .arc-toolbar {
+.arc-toolbar {
 	width:978px;
-	margin:0 auto
+	margin:20px auto;
 }
 .arc-toolbar {
 	background:#fff;
@@ -11970,7 +11962,7 @@ ul.tag li a.sp-tag {
 	border:1px solid #e5e9ef;
 	border-radius:4px;
 	position:relative;
-	z-index:102;
+	/*z-index:102;*/
 	zoom:1
 }
 .arc-toolbar:after {
@@ -15682,4 +15674,10 @@ to {
 to {
 	transform:rotate(360deg)
 }
+}
+
+
+/* qq_kids */
+.qq_kids{
+	position: relative;
 }

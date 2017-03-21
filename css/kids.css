@@ -1,0 +1,562 @@
+/*玩 看 学*/
+.module3 {
+	padding-bottom:45px
+}
+.module3 .tit_box {
+	height:75px;
+	position:relative
+}
+.module3 .links {
+	font-size:14px;
+	float:right;
+	margin:45px 30px 0 0
+}
+.module3 .links a {
+	padding:0 20px
+}
+.module3 .links a:hover {
+	color:#3980d2;
+	text-decoration:none
+}
+.module3 .tit_box .line {
+	position:absolute;
+	top:60px;
+	left:0;
+	height:0;
+	width:100%
+}
+.module3 .tit_box .cartoon_box {
+	position:absolute;
+	width:255px;
+	height:110px;
+	top:0;
+	left:50%;
+	margin-left:-123px
+}
+.module3 .hd {
+	padding:15px 0 9px 0;
+	border-bottom:1px solid #dee2e5
+}
+.module3 .right {
+	width:310px;
+	padding-left:15px;
+	border-left:1px solid #dee2e5
+}
+.play .tit_box .cartoon_box {
+	background:#fff url(img/wanbg.jpg) no-repeat 0 -15px
+}
+.play .tit_box .line {
+	border-bottom:3px solid #3980d2
+}
+.look .tit_box .cartoon_box {
+	background:#fff url(img/kanbg.jpg) no-repeat 0 -15px
+}
+.look .tit_box .line {
+	border-bottom:3px solid #78507c
+}
+.look .tit_box .cartoon_box .kan0 {
+	display:block;
+	width:37px;
+	height:37px;
+	position:absolute;
+	top:40px;
+	left:65px;
+	background:url(img/kan0.png) no-repeat
+}
+.look .tit_box .cartoon_box .kan1 {
+	display:block;
+	width:30px;
+	height:30px;
+	position:absolute;
+	top:40px;
+	left:35px;
+	background:url(img/kan1.png) no-repeat;
+}
+.look .tit_box .cartoon_box .kan2 {
+	display:block;
+	width:29px;
+	height:29px;
+	position:absolute;
+	top:14px;
+	left:50px;
+	background:url(img/kan2.png) no-repeat;
+}
+.look .tit_box .cartoon_box .kan3 {
+	display:block;
+	width:67px;
+	height:29px;
+	position:absolute;
+	top:33px;
+	left:102px;
+	background:url(img/kan3.png) no-repeat
+}
+.study .tit_box .cartoon_box {
+	background:#fff url(img/xuebg.png) no-repeat 0 -15px
+}
+.study .tit_box .line {
+	border-bottom:3px solid #eb7126
+}
+.study .tit_box .cartoon_box .xue1 {
+	display:block;
+	width:31px;
+	height:33px;
+	position:absolute;
+	top:41px;
+	left:70px;
+	background:url(img/xue1.png) no-repeat;
+}
+.study .tit_box .cartoon_box .xue2 {
+	display:block;
+	width:36px;
+	height:17px;
+	position:absolute;
+	top:58px;
+	left:100px;
+	background:url(img/xue2.png) no-repeat;
+}
+.module3 ul li {
+	display:block;
+	float:left
+}
+.boy_tj,.girl_tj,.xsz_tj,.gsb_tj {
+	padding:20px 0;
+	width:640px;
+	overflow:hidden;
+	height:98px
+}
+.girl_tj,.xsz_tj {
+	border-bottom:1px dotted #bcbcbc;
+	padding:20px 0 29px
+}
+.gsb_tj {
+	height:204px
+}
+.boy_tj_list,.girl_tj_list {
+	width:641px
+}
+.xsz_tj_list,.gsb_tj_list {
+	width:656px
+}
+.boy_tj li,.girl_tj li,.xsz_tj li,.gsb_tj li {
+	width:148px;
+	height:98px;
+	margin-right:1px
+}
+.gsb_tj li {
+	height:204px
+}
+.xsz_tj li,.gsb_tj li {
+	margin-right:16px
+}
+.boy_tj li.tag,.girl_tj li.tag {
+	width:44px
+}
+.boy_tj li.tag span,.girl_tj li.tag span {
+	display:block;
+	width:44px;
+	height:88px;
+	background-position:-357px 0
+}
+.girl_tj li.tag span {
+	background-position:-411px 0
+}
+.boy_tj li .pic,.girl_tj li .pic,.xsz_tj li .pic,.gsb_tj li .pic,.yxg_tj_list li .pic {
+	display:block;
+	width:148px;
+	height:98px;
+	position:relative
+}
+.boy_tj li .pic img,.girl_tj li .pic img,.xsz_tj li .pic img,.gsb_tj li .pic img,.yxg_tj_list li .pic img {
+	width:148px;
+	height:98px
+}
+.boy_tj li .pic:hover,.girl_tj li .pic:hover,.xsz_tj li .pic:hover,.gsb_tj li .pic:hover {
+	opacity:0.8;
+	-moz-opacity:0.8;
+	filter:alpha(opacity=80)
+}
+.gsb_tj li .pic,.gsb_tj li .pic img {
+	height:204px
+}
+.dh_list,.ts_list {
+	padding:7px 0 0 12px
+}
+.dh_list li,.ts_list li {
+	width:100%;
+	height:45px;
+	border-bottom:1px dotted #bdbdbd;
+	font:16px/45px "微软雅黑"
+}
+.dh_list li.first {
+	height:80px;
+	border-bottom:0 none;
+	background-color:#f0f0f0
+}
+.dh_list li.last,.ts_list li.last {
+	border-bottom:0 none
+}
+.dh_list li a:hover,.ts_list li a:hover {
+	color:#3980d2;
+	text-decoration:none
+}
+.dh_list li .num,.ts_list li .num {
+	display:block;
+	height:15px;
+	width:15px;
+	float:left;
+	margin:16px 20px 0 0
+}
+.dh_list li.first .pic {
+	float:left;
+	height:80px;
+	width:125px;
+	position:relative;
+	margin-right:10px
+}
+.dh_list li.first .pic .num1 {
+	display:block;
+	height:37px;
+	width:37px;
+	position:absolute;
+	bottom:0;
+	left:0;
+	margin:0;
+	background-position:-136px -155px
+}
+.dh_list li.first .info {
+	width:153px;
+	float:left;
+	line-height:23px;
+	color:#282828;
+	padding-top:6px
+}
+.dh_list li.first .info .r_up,.dh_list li .g_up,.dh_list li .g_down,.dh_list li .g_ping,.ts_list li .g_up,.ts_list li .g_down,.ts_list li .g_ping {
+	display:block;
+	float:right;
+	width:9px;
+	height:13px;
+	background-position:-283px -179px;
+	margin-top:5px
+}
+.dh_list li .g_up,.ts_list li .g_up {
+	background-position:-283px -155px;
+	margin:18px 30px 0 0
+}
+.dh_list li .g_down,.ts_list li .g_down {
+	background-position:-302px -155px;
+	margin:18px 30px 0 0
+}
+.dh_list li .g_ping,.ts_list li .g_ping {
+	width:12px;
+	height:3px;
+	background-position:-321px -155px;
+	margin:23px 28px 0 0
+}
+.dh_list li.first .info .stars span {
+	display:inline-block;
+	width:14px;
+	height:13px;
+	background-position:-300px -179px
+}
+.dh_list li.first .info p {
+	font:12px/24px "宋体";
+	color:#767676
+}
+.dh_list li .num2 {
+	background-position:-183px -155px
+}
+.dh_list li .num3 {
+	background-position:-208px -155px
+}
+.ts_list li .num1 {
+	background-position:-183px -177px
+}
+.ts_list li .num2 {
+	background-position:-208px -177px
+}
+.ts_list li .num3 {
+	background-position:-233px -177px
+}
+.ts_list li .num4,.dh_list li .num4 {
+	background-position:-233px -155px
+}
+.ts_list li .num5,.dh_list li .num5 {
+	background-position:-258px -155px
+}
+.zt_win {
+	padding-top:30px;
+	overflow:hidden;
+	height:105px;
+	position:relative
+}
+.zt_tj_list {
+	width:642px
+}
+.zt_tj_list li {
+	display:block;
+	height:105px;
+	width:105px;
+	margin-right:2px
+}
+.zt_tj_list li a {
+	display:block;
+	width:105px;
+	height:105px;
+	position:relative
+}
+.zt_tj_list li img {
+	height:105px;
+	width:105px
+}
+.zt_tj_list li .info {
+	position:absolute;
+	top:105px;
+	left:0;
+	height:105px;
+	width:105px;
+	background-color:#3980d2;
+	color:#fff
+}
+.zt_tj_list li .info em {
+	display:block;
+	font:14px/30px "微软雅黑"
+}
+.zt_tj_list li .info .book_author {
+	text-indent:12px;
+	padding-top:24px
+}
+.zt_tj_list li .info .book_name {
+	text-indent:7px
+}
+.game .zt_tj_list {
+	position:absolute;
+	top:30px;
+	left:0
+}
+.zt_win .l_btn,.zt_win .r_btn {
+	display:block;
+	height:68px;
+	width:47px;
+	position:absolute;
+	top:48px;
+	background-position:-136px -228px;
+	opacity:.5;
+	-moz-opacity:.5;
+	filter:alpha(opacity=50)
+}
+.zt_win .l_btn {
+	left:0
+}
+.zt_win .r_btn {
+	right:0;
+	background-position:-188px -228px
+}
+.zt_win .l_btn:hover,.zt_win .r_btn:hover {
+	opacity:1;
+	-moz-opacity:1;
+	filter:alpha(opacity=100)
+}
+.xjc_tj_list li .info {
+	background-color:#9c6285
+}
+.study .art_list {
+	padding-top:33px
+}
+.study .art_list li {
+	width:100%;
+	height:174px;
+	border-bottom:1px dotted #bdbdbd;
+	position:relative
+}
+.study .art_list li.last {
+	border-bottom:0 none
+}
+.study .art_list li .pic {
+	width:200px;
+	height:130px;
+	float:left;
+	margin:22px 30px 0 0
+}
+.study .art_list li .pic img {
+	width:200px;
+	height:130px
+}
+.study .art_list li .pic a:hover {
+	opacity:0.8;
+	-moz-opacity:0.8;
+	filter:alpha(opacity=80)
+}
+.study .art_list li .txts {
+	float:right;
+	width:410px
+}
+.study .art_list li .txts h3 {
+	padding:20px 0
+}
+.study .art_list li .txts h3 a {
+	font:bold 20px/30px "微软雅黑";
+	color:#666
+}
+.study .art_list li .txts h3 a:hover {
+	color:#3980d2
+}
+.study .art_list li .txts h3 .cate {
+	display:block;
+	width:44px;
+	height:22px;
+	font:16px/22px "微软雅黑";
+	color:#fff;
+	text-align:center;
+	float:left;
+	margin:5px 15px 0 0
+}
+.study .art_list li .txts h3 .cate:hover {
+	color:#fff
+}
+.study .art_list li .txts h3 .cate1 {
+	background-color:#ae7243
+}
+.study .art_list li .txts h3 .cate2 {
+	background-color:#f03f0f
+}
+.study .art_list li .txts h3 .cate3 {
+	background-color:#eb7126
+}
+.study .art_list li .txts p {
+	font:14px/26px "微软雅黑";
+	color:#666;
+	height:54px;
+	overflow:hidden;
+}
+.study .art_list li .txts p .detail {
+	color:#3980d2
+}
+.study .art_list li .txts p .detail:hover {
+	color:#cd0200
+}
+.study .art_list li .links {
+	position:absolute;
+	right:-20px;
+	bottom:20px;
+	color:#919191;
+	margin:0
+}
+.study .art_list li .links a {
+	padding:0 20px;
+	color:#919191;
+	font:14px/30px "微软雅黑"
+}
+.study .art_list li .links a:hover,.study .art_list li .alink a:hover {
+	color:#3980d2;
+	text-decoration:none
+}
+.study .art_list li .alink {
+	position:absolute;
+	bottom:20px;
+	left:230px
+}
+.study .art_list li .alink a {
+	color:#919191;
+	font:14px/30px "微软雅黑";
+	list-style:disc
+}
+.school .bd {
+	width:300px;
+	padding-left:10px
+}
+.school .nr_tj {
+	padding-top:20px;
+	width:300px;
+	height:178px;
+	overflow:hidden
+}
+.school .nr_tj ul {
+	display:block;
+	width:350px
+}
+.school .nr_tj ul li {
+	margin-right:20px;
+	background-color:#f0f0f0;
+	width:140px;
+	height:178px
+}
+.school .nr_tj ul li .name {
+	display:block;
+	height:38px;
+	font:14px/38px "微软雅黑";
+	text-align:center;
+	color:#666
+}
+.school .nr_tj ul li a:hover {
+	opacity:0.8;
+	-moz-opacity:0.8;
+	filter:alpha(opacity=80)
+}
+.school .nr_tj ul li a:hover,.school .nr_tj ul li a:hover span {
+	color:#cd0200;
+	text-decoration:none
+}
+.school .cate_class {
+	color:#666;
+	padding:15px 0
+}
+.school .cate_class a {
+	padding:0 18px;
+	font:14px/30px "微软雅黑";
+	color:#666
+}
+.school .cate_class a:hover {
+	color:#3980d2;
+	text-decoration:none
+}
+.school .cate_class .first {
+	padding-left:0
+}
+.school .cate_class .last {
+	padding-right:0
+}
+.school .study_cate {
+	width:300px;
+	height:189px;
+	overflow:hidden
+}
+.school .study_cate ul {
+	display:block;
+	width:330px
+}
+.school .study_cate ul li {
+	margin:0 15px 15px 0
+}
+.school .study_cate ul li a {
+	display:block;
+	height:36px;
+	width:90px;
+	text-align:center;
+	font:14px/36px "微软雅黑";
+	color:#fff
+}
+.school .study_cate ul li .c1 {
+	background-color:#2fa5ff
+}
+.school .study_cate ul li .c2 {
+	background-color:#9b6285
+}
+.school .study_cate ul li .c3 {
+	background-color:#eb7223
+}
+.school .study_cate ul li .c4 {
+	background-color:#77ccb9
+}
+.school .study_cate ul li a:hover {
+	background-color:#c5c5c5;
+	text-decoration:none
+}
+.cartoon_box .football {
+	display:block;
+	height:42px;
+	width:42px;
+	position:absolute;
+	top:30px;
+	left:55px;
+	background:url(img/qiu.png) no-repeat;
+}
