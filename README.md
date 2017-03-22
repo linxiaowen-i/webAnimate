@@ -26,21 +26,30 @@
 	animation-duration: 2s; //时长
 
 4 关于动画属性
-	`animation-delay`
-	`animation-fill-mode` 接受四个值：`none`、`backwards`、`forwards`和`both`
-		默认值`none`，动画结束的时候，回到初始位置。
-		`forwards` 动画结束之后，保持它最后一帧的样式
-		`backwards` 小球会在`animation-delay`时变成我们0%关键帧定义的样式
-		`both` 是`forwards`和`backwards`的结合
-	`animation-direction` 它的值可以是`normal`（正常）, `reverse`（反转）, `alternate`（交替）和`alternate-reverse`（交替反转）
+- `animation-delay`
+- `animation-fill-mode` 接受四个值：`none`、`backwards`、`forwards`和`both`
+
+默认值`none`，动画结束的时候，回到初始位置。
+`forwards` 动画结束之后，保持它最后一帧的样式
+`backwards` 小球会在`animation-delay`时变成我们0%关键帧定义的样式
+`both` 是`forwards`和`backwards`的结合
 	
-	属性都可以简写到`animation`里，（顺序不一样没关系，但是一些如果是相似的值，如delay和duration，默认先duration，后delay。）
-		animation: myAnimation 1s ease-in-out 2s 4;
-		animation: <animation-name> <animation-duration> <animation-timing-function> <animation-delay> <animation-iteration-count>
-	W3C定义的简写顺序：
-		<single-animation> = <single-animation-name> || <time> || <single-animation-timing-function> || <time> || <single-animationiteration-count> || <single-animation-direction> || <single-animation-fill-mode> || <single-animation-play-state>
-	一个元素用两个动画：
-		animation: myAnimation 1s ease-in-out 2s 4, myOtherAnimation 4s ease-out 2s;
+- `animation-direction` 它的值可以是`normal`（正常）, `reverse`（反转）, `alternate`（交替）和`alternate-reverse`（交替反转）
+
+---
+
+属性都可以简写到`animation`里，（顺序不一样没关系，但是一些如果是相似的值，如delay和duration，默认先duration，后delay。）
+	
+	animation: myAnimation 1s ease-in-out 2s 4;
+	animation: <animation-name> <animation-duration> <animation-timing-function> <animation-delay> <animation-iteration-count>
+	
+W3C定义的简写顺序：
+	
+	<single-animation> = <single-animation-name> || <time> || <single-animation-timing-function> || <time> || <single-animationiteration-count> || <single-animation-direction> || <single-animation-fill-mode> || <single-animation-play-state>
+	
+一个元素用两个动画：
+	
+	animation: myAnimation 1s ease-in-out 2s 4, myOtherAnimation 4s ease-out 2s;
 
 5 easing
 Easing是速率被分配到整个动画过程中的方式。
