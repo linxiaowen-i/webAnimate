@@ -1,0 +1,78 @@
+body {
+  /*background:#383b3b;*/
+  margin:3em 10%; 
+}
+
+.ball{
+  animation-name: ballmove;
+  animation-duration: 2s;
+  animation-timing-function: linear;/*linear ease ease-in ease-out easing-in-out*/
+  /*animation-iteration-count: 3;*/
+  animation-delay: 2s;
+  animation-fill-mode: both;/*none forwards backwards both*/
+  animation-direction: normal;/*normal reverse alternate alternate-reverse*/
+}
+
+@keyframes ballmove {
+  0% {
+    transform: translateX(100px) rotate(0);
+  }
+  40% {
+    transform: translateX(-100px) rotate(-360deg);
+  }
+  100% {
+    transform: translateX(200px) rotate(180deg);
+  }   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sprite {
+  width:245px;
+  height:400px;
+  display:block;    
+  background:transparent url(img/walker.png) 0 0 no-repeat;  
+  margin:3em auto;
+  animation: walker 1s steps(10) infinite;/*step用于定义这个背景图在过程中有多少次停顿，2秒一共停顿10次*/
+}
+@keyframes walker {
+  /*0% {background-position:0 0;}*/
+  100% {background-position:0 -4000px;}
+}
+
+.face {
+  height:35px;
+  width:32px;
+  animation:face 400ms steps(4) infinite;
+  background:url(img/face.png);
+}
+@keyframes face {
+  /*0% {background-position:0 0;}*/
+  100% {background-position:0px -400%;}
+}
