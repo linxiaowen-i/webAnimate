@@ -43,7 +43,7 @@ div{
     width:245px;
   height:400px;
   display:block;    
-  background:transparent url(img/walker.png) 0 0 no-repeat;  
+  background:transparent url(https://yanzilulu.github.io/webAnimate/css/img/walker.png) 0 0 no-repeat;  
  margin:3em auto;
   animation: walker 1s steps(5) infinite;
 }
@@ -57,7 +57,7 @@ div{
   width:200px;
   height:200px;
   position:absolute;
-  background: url(img/sticker.png) top center no-repeat; 
+  background: url(https://yanzilulu.github.io/webAnimate/css/img/sticker.png) top center no-repeat; 
   animation: spin 10s linear infinite;
   animation-play-state: paused; 
 }
@@ -72,7 +72,7 @@ div{
 .mol {
   width:174px;  
   height:174px;
-    background:transparent url('img/mol_badge.png') top center no-repeat;
+    background:transparent url('https://yanzilulu.github.io/webAnimate/css/img/mol_badge.png') top center no-repeat;
     position:absolute;
     left:400px;
     animation-name: roll-in, scale-up;
