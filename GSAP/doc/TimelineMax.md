@@ -119,8 +119,161 @@
 	  .staggerTo([e1, e2, e3], 1.5, {rotation:45}, 0.25);
 
 
+> 因为周末回家放了个小假，回来接着看文档感觉需要把前面的梳理一下才能接着往下看【这时候就考验自己前面会不会写得乱七八糟了】_(:зゝ∠)_心塞.gif
+
+### adPause()
+
+call()
+
+clear()
+
+currentLabel()
+
+duration()
+
+endTime()
+
+eventCallback()
+
+TimelineMax.exportRoot()
+
+from()
+
+fromTo()
+
+getActive()
+
+getChildren()
+
+getLabelAfter()
+
+getLabelBefore()
+
+getLabelsArray()
+
+getLabelTime()
+
+getTweensOf()
+
+invalidate()
+
+isActive()
+
+kill()
+
+pause()
+
+paused()
+
+play()
+
+progress()
+
+remove()
+
+removeCallback()
+
+removeLabel()
+
+removePause()
+
+render()
+
+repeat()
+
+repeatDelay()
+
+restart()
+
+resume()
+
+reverse()
+
+reversed()
+
+seek()
+
+set()
+
+shiftChildren()
+
+staggerFrom()
+
+staggerFromTo()
+
+staggerTo(targets:Array, duration:Number, vars:Object, stagger:Number, position:*, onCompleteAll:Function, onCompleteAllParams:Array, onCompleteScope:*):*
+在给DOM元素添加动画时，targets可以是：元素数组，一个jQuery对象，CSS选择器字符串。
 
 
+startTime(value:Number):*
+get or set动画在父时间轴开始的时间
+	var start = myAnimation.startTime();
+	myAnimation.startTime(2);
+
+
+time(value:Number, suppressEvents:Boolean):*
+get or set playhead的当前位置，不包含repeats或repeatDelays
+使用：
+	var currentTime = myTimeline.time();
+	myTimeline.time(2);
+
+
+timeScale(value:Number):*
+缩放动画的时间，1表示常速，0.5表示半速，2表示两倍速【简单说，调整速度？
+使用：
+	var currentTimeScale = myAnimation.timeScale();
+	myAnimation.timeScale(0.5);
+
+
+totalDuration(value:Number):*
+使用:
+	var total = myTimeline.totalDuration();
+	myTimeline.totalDuration();
+
+
+totalProgress(value:Number, suppressEvents:Boolean):*
+get or set timeline的总进度条，值在[0, 1]之间。
+参数：
+value:Number 缺省参数，则返回当前值(get)。
+使用：
+	var progress = myAnimation.totalProgress();
+	myAnimation.totalProgress(0.25);
+
+
+totalTime(time:Number, suppressEvents:Boolean):*
+根据`totalDuration()`获取(get)或设置(set)playhead的位置
+参数：
+time:Number 缺省参数，则返回当前值(get)。如果有参数，返回实例本身。值为负，表示动画的末尾。
+suppressEvents:Boolean 默认false，如果为true，当playhead移动到新位置时，不会触发`time`位置的任何事件or回调
+使用：
+	var tt = myAnimation.totalTime();
+	myAnimation.totalTime(2);
+
+tweenFromTo(fromPosition, toPosition, vars:Object):TweenLite 
+
+
+tweenTo(position:*,vars:Object):TweenLite -创建一个线性tween的渐变，将playhead到一个特定的时间or label连接起来。
+`myTimeline.tweenTo(5)`回从当前timeline在的位置，移动到5秒的点。
+`myTimeline.tweenTo("myLabel")`会移动到对应myLabel的位置。
+`vars`可选，默认null，可以定义一个onComplete ease delay 或其它TweenLite特殊属性
+返回一个TweenLite实例
+
+	myTimeline.tweenTo(5, {onComplete:myFunction, onCompleteParams[myTimeline], ease:Strong.easeOut});
+
+
+useFrames():Boolean -timeline的默认事件模式是second，如果设置了`useFrames()`，那么事件模式是基于frames的。
+只读，不接收参数，返回Boolean值。
+在contructor中的vars参数中设置，或者是外部时间模式已经是frames的情况下才可以使用，嵌套在某段上(这里文档不清晰，目测是父timeline里面的子timeline里)。
+
+
+yoyo(value: Boolean):* -获取(get)或者设置(set) timeline的yoyo状态
+默认值false
+省略参数表示get操作，返回当前的yoyo值。有参数则表示set，返回实例本身。
+yoyo同repeat一起使用，(因为没有repeat，设置yoyo也没什么意义了呀= =)
+**使用：**
+	
+	var yoyo = myTimeline.yoyo();//getter
+	myTimeline.yoyo(true);//setter
 
 
 
